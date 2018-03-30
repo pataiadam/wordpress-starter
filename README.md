@@ -1,27 +1,38 @@
-A Docker Wordpress development environment by the team at Visible and some awesome contributors. [See the original repository](https://github.com/visiblevc/wordpress-starter).
+A Docker Wordpress development environment by the team at [Visible](https://visible.vc/) and some awesome [contributors](https://github.com/visiblevc/wordpress-starter/graphs/contributors). [See the original repository](https://github.com/visiblevc/wordpress-starter).
 
 # Quickstart
 
 ## Running the services
 
-0. Init project. The following line will clone this repo without git history. Feel free to rename the project name in the command (`my-wordpress-project`)
+#### 1. Init project. 
+
+The following line will clone this repo without git history. Feel free to change the project name in the command (`my-wordpress-project`)
+
 ```sh
 git clone --depth=1 --branch=master https://github.com/pataiadam/wordpress-starter.git my-wordpress-project && rm -rf !$/.git
 ```
 
-1. Run the following command in the root of the project directory.
+Or just clone the whole repository.
+
+#### 2. Configure (optional)
+
+You can change passwords, add default plugins and/or themes. See the *Options* section in this README.
+
+#### 3. Run
 ```sh
-$ docker-compose up
+docker-compose up -d && docker-compose logs -f wordpress
 ```
 
-2. When the build is finished, hit <kbd>ctrl</kbd>-<kbd>c</kbd> to detach from the logs and visit `localhost:8080` in your browser.
+#### 4. Visit wordpress site
 
-Default admin login (you can change the password in `docker-compose.yml`):
+When the build is finished, hit <kbd>ctrl</kbd>-<kbd>c</kbd> to detach from the logs.
+ 
+Visit `localhost:8080` in your browser. Default admin login (you can change the password in `docker-compose.yml`):
 
-```
-http://localhost:8080/wp-admin
-email: admin@wordpress.com
-password: 27DLZd5uckTg2J23
+```text
+site:           http://localhost:8080/wp-admin
+email:          admin@wordpress.com
+password:       27DLZd5uckTg2J23
 ```
 
 ## Working with Databases
