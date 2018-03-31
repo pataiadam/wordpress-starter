@@ -6,10 +6,17 @@ A Docker Wordpress development environment by the team at [Visible](https://visi
 
 #### 1. Init project. 
 
-The following line will clone this repo without git history. Feel free to change the project name in the command (`my-wordpress-project`)
+The following lines will clone this repo without git history. Feel free to change the project name in the command (`my-wordpress-project`)
 
 ```sh
-git clone --depth=1 --branch=master https://github.com/pataiadam/wordpress-starter.git my-wordpress-project && rm -rf !$/.git
+# Project's name
+WPNAME=my-wordpress-project
+
+# Clone the repo
+git clone --depth=1 https://github.com/pataiadam/wordpress-starter.git $WPNAME
+
+# Remove the .git directory
+cd $WPNAME && rm -rf .git
 ```
 
 Or just clone the whole repository.
