@@ -6,7 +6,7 @@ services:
       - 8080:80
     volumes:
       - ./data:/data
-      - ./wp-content/uploads:/app/wp-content/uploads
+      - ./wp-content:/app/wp-content
     # - ./plugins/MY_PLUGIN:/app/wp-content/plugins/MY_PLUGIN # Plugin development
     # - ./themes/MY_THEME:/app/wp-content/themes/MY_THEME   # Theme development
     environment:
